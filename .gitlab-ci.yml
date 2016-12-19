@@ -1,0 +1,33 @@
+stages:
+    - build
+    - test
+
+variables:
+    CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+
+build:
+    stage: build
+    tags:
+        - shell
+    script:
+        - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+        - docker build --pull -t $CONTAINER_TEST_IMAGE .
+        - docker push $CONTAINER_TEST_IMAGE
+
+lint:
+    stage: test
+    tags:
+        - docker
+    image: $CONTAINER_TEST_IMAGE
+    script:
+        - cd /app
+        - npm run lint
+
+test:
+    stage: test
+    tags:
+        - docker
+    image: $CONTAINER_TEST_IMAGE
+    script:
+        - cd /app
+        - npm run test

@@ -1,0 +1,30 @@
+{
+  "name": "request-expect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony-async-await",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/anderson-arlen/request-expect.git"
+  },
+  "keywords": [
+    "koa",
+    "request",
+    "sanitize",
+    "expect",
+    "body"
+  ],
+  "author": "Arlen Andersion <anderson.arlen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/anderson-arlen/request-expect/issues"
+  },
+  "homepage": "https://gitlab.com/anderson-arlen/request-expect#README",
+  "dependencies": {
+    "should": "^11.1.2"
+  }
+}

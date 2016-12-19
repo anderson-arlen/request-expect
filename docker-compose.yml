@@ -1,0 +1,9 @@
+version: '2'
+services:
+    test:
+        build: .
+        image: booster
+        command: mocha --harmony-async-await
+        volumes:
+            - .:/app
+            - /app/node_modules
