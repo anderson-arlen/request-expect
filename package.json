@@ -25,6 +25,7 @@
   },
   "homepage": "https://gitlab.com/anderson-arlen/request-expect#README",
   "dependencies": {
+    "babel-eslint": "^7.1.1",
     "should": "^11.1.2"
   }
 }
