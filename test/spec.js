@@ -31,14 +31,14 @@ describe('RequestExpect', () => {
 			await ctx.request.expect((types) => {
 				return {
 					body: {
-						username: types.string.isRequired,
-						password: types.string.isRequired,
+						username: types.string,
+						password: types.string,
 						someData: [
-							types.integer.isRequired
+							types.integer
 						],
 						moreData: {
-							one: types.integer.isRequired,
-							two: types.number.isRequired
+							one: types.integer,
+							two: types.number
 						}
 					}
 				};

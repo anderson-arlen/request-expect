@@ -2,7 +2,7 @@ version: '2'
 services:
     test:
         build: .
-        image: booster
+        image: request-expect
         command: npm test
         volumes:
             - .:/app
