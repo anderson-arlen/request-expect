@@ -3,7 +3,7 @@ services:
     test:
         build: .
         image: booster
-        command: mocha --harmony-async-await
+        command: npm test
         volumes:
             - .:/app
             - /app/node_modules

@@ -11,7 +11,7 @@ describe('RequestExpect', () => {
 				return true;
 			};
 
-		await requestExpect(ctx, next);
+		await requestExpect.koa(ctx, next);
 
 		should.exist(ctx.request.expect);
 	});

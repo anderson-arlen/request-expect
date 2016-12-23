@@ -49,16 +49,27 @@ class RequestExpect {
 
 const reqExpect = new RequestExpect();
 
-async function attachRequestExpect(ctx, next) {
-	ctx.request.expect = async (getSpec) => {
-		const sanitized = await reqExpect.sanitizeObject(getSpec(types), ctx.request);
-		ctx.request = Object.assign(ctx.request, sanitized); // overwrite params, query, body
+module.exports = {
+	errors,
 
-		return sanitized;
-	};
+	async koa(ctx, next) {
+		ctx.request.expect = async (getSpec) => {
+			const sanitized = await reqExpect.sanitizeObject(getSpec(types), ctx.request);
+			ctx.request = Object.assign(ctx.request, sanitized); // overwrite params, query, body
 
-	await next();
-}
+			return sanitized;
+		};
 
-attachRequestExpect.errors = errors;
-module.exports = attachRequestExpect;
+		await next();
+	},
+	express(req, res, next) {
+		req.expect = async(getSpec) => {
+			const sanitized = await reqExpect.sanitizeObject(getSpec(types), req);
+			req = Object.assign(req, sanitized); // overwrite params, query, body
+
+			return sanitized;
+		};
+
+		next();
+	}
+};
