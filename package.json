@@ -18,7 +18,7 @@
     "expect",
     "body"
   ],
-  "author": "Arlen Andersion <anderson.arlen@gmail.com>",
+  "author": "Arlen Andersion <anderson.arlen+npm@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/anderson-arlen/request-expect/issues"
