@@ -23,7 +23,7 @@ app.use(bodyParser());
 app.use(requestExpect.koa);
 app.use(async function YourApiEndpoint(ctx) {
 	// request-expect attaches itself to your request object
-	await ctx.request.expect((types) => {
+	ctx.request.expect((types) => {
 		// return an object definition of what you expect to be sent in the request
 		return {
 			params: {
@@ -57,7 +57,7 @@ const
 app.use(requestExpect.express);
 app.get('/', async function YourApiEndpoint(req, res) {
 	// request-expect attaches itself to your request object
-	await req.expect((types) => {
+	req.expect((types) => {
 		// return an object definition of what you expect to be sent in the request
 		return {
 			params: {
