@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/anderson-arlen/request-expect.git"
+    "url": "git+ssh://git@github.com:anderson-arlen/request-expect.git"
   },
   "keywords": [
     "koa",
@@ -21,9 +21,9 @@
   "author": "Arlen Andersion <anderson.arlen+npm@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/anderson-arlen/request-expect/issues"
+    "url": "https://github.com/anderson-arlen/request-expect/issues"
   },
-  "homepage": "https://gitlab.com/anderson-arlen/request-expect#README",
+  "homepage": "https://github.com/anderson-arlen/request-expect",
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "should": "^11.1.2"
