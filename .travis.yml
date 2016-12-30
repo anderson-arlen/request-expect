@@ -5,5 +5,4 @@ services:
 
 script:
     - docker build -t anderson-arlen/request-expect .
-    - docker run anderson-arlen/request-expect npm run lint
     - docker run anderson-arlen/request-expect npm test
