@@ -4,5 +4,5 @@ services:
     - docker
 
 script:
-	docker build -t anderson-arlen/request-expect .
-	docker run anderson-arlen/request-expect "npm test"
+    docker build -t anderson-arlen/request-expect .
+    docker run anderson-arlen/request-expect "npm test"
