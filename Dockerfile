@@ -1,5 +1,6 @@
 FROM node:7.0.0-slim
 
+ENV NODE_PATH /app
 ENV HOME /app
 WORKDIR $HOME
 
