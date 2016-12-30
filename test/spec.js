@@ -28,7 +28,7 @@ describe('RequestExpect', () => {
 				}
 			};
 
-			await ctx.request.expect((types) => {
+			ctx.request.expect((types) => {
 				return {
 					body: {
 						username: types.string,
