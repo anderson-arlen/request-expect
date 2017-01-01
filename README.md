@@ -1,6 +1,17 @@
-# request-expect
+request-expect
+==============
+[![build status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url]
+[![node version][node-image]][node-url]
 
-> Easy request sanitization & make your APIs self documenting
+[travis-image]: https://img.shields.io/travis/anderson-arlen/request-expect.svg?style=flat-square
+[travis-url]: https://travis-ci.org/anderson-arlen/request-expect
+[npm-image]: https://img.shields.io/npm/v/request-expect.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/request-expect
+[node-image]: https://img.shields.io/badge/node.js-%3E%3D7.0.0-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+
+Easily sanitize Koa and Express request bodies, throwing errors when required parameters are missing or invalid. Helps make your APIs self documenting.
 
 ## Installation
 
