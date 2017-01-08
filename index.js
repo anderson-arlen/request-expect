@@ -60,7 +60,7 @@ module.exports = {
 			return sanitized;
 		};
 
-		next();
+		await next();
 	},
 	express(req, res, next) {
 		req.expect = (getSpec) => {
